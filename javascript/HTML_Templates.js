@@ -76,6 +76,7 @@ function pokemonMovesListTemplateHTML(i) {
 
 
 function pokemonMovesTemplateHTML(i, index) {
+  let sortedPokemonMoves = loadedPokemonData[i].moves.sort((a, b) => a.move.name.localeCompare(b.move.name));
   return `
 <div class="pokemons_moves_container"> ${upperCase(loadedPokemonData[i].moves[index].move.name)}, </div>
 `;
